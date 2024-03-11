@@ -23,7 +23,7 @@ Esportare quindi il diagramma in jpg e caricarlo nella repo.
 
 Dopo aver creato un nuovo database nel vostro phpMyAdmin e aver importato lo schema allegato, eseguite le query riportate di seguito
 
-# QUERY 1
+### QUERY 1
 
 - Selezionare tutti gli studenti nati nel 1990
 
@@ -33,7 +33,7 @@ FROM `students`
 WHERE YEAR(`date_of_birth`) = '1990';
 ```
 
-# QUERY 2
+### QUERY 2
 
 - Selezionare tutti i corsi che valgono più di 10 crediti
 
@@ -41,4 +41,25 @@ WHERE YEAR(`date_of_birth`) = '1990';
 SELECT *
 FROM `courses`
 WHERE `cfu` > '10';
+```
+
+### QUERY 3
+
+- Selezionare tutti gli studenti con più di 30 anni
+
+```sql
+SELECT *
+FROM `students`
+WHERE `date_of_birth` < '1994-03-11';
+```
+
+### QUERY 4
+
+- Selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di
+  laurea
+
+```sql
+SELECT *
+FROM `courses`
+WHERE `period` = 'I semestre' AND `year` = 1;
 ```
