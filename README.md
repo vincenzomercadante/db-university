@@ -50,7 +50,7 @@ WHERE `cfu` > 10;
 ```sql
 SELECT *
 FROM `students`
-WHERE `date_of_birth` < '1994-03-11';
+WHERE DATE_FORMAT(FROM_DAYS(DATEDIFF(CURRENT_DATE(), `date_of_birth`)), '%Y') + 0 > 30;
 ```
 
 ### QUERY 4
