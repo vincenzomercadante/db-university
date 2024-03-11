@@ -63,3 +63,14 @@ SELECT *
 FROM `courses`
 WHERE `period` = 'I semestre' AND `year` = 1;
 ```
+
+### QUERY 5
+
+- Selezionare tutti gli appelli d'esame che avvengono nel pomeriggio (dopo le 14) del
+  20/06/2020
+
+```sql
+SELECT *
+FROM `courses`
+WHERE `period` = 'I semestre' AND `year` = 1;
+```
