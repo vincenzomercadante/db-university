@@ -84,3 +84,12 @@ SELECT *
 FROM `degrees`
 WHERE `level` = 'magistrale';
 ```
+
+### QUERY 7
+
+- Da quanti dipartimenti è composta l'università?
+
+```sql
+SELECT COUNT(*) AS 'departments_number'
+FROM `departments`;
+```
