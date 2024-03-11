@@ -30,7 +30,7 @@ Dopo aver creato un nuovo database nel vostro phpMyAdmin e aver importato lo sch
 ```sql
 SELECT *
 FROM `students`
-WHERE YEAR(`date_of_birth`) = '1990';
+WHERE YEAR(`date_of_birth`) = 1990;
 ```
 
 ### QUERY 2
@@ -40,7 +40,7 @@ WHERE YEAR(`date_of_birth`) = '1990';
 ```sql
 SELECT *
 FROM `courses`
-WHERE `cfu` > '10';
+WHERE `cfu` > 10;
 ```
 
 ### QUERY 3
@@ -72,7 +72,7 @@ WHERE `period` = 'I semestre' AND `year` = 1;
 ```sql
 SELECT *
 FROM `exams`
-WHERE `date` = '2020-06-20' AND HOUR(`hour`) >= '14';
+WHERE `date` = '2020-06-20' AND HOUR(`hour`) >= 14;
 ```
 
 ### QUERY 6
