@@ -33,3 +33,15 @@ SELECT `exam_id`, CEIL(AVG(`vote`)) AS "avg_vote"
 FROM `exam_student`
 GROUP BY `exam_id`;
 ```
+
+### QUERY 4
+
+- Contare quanti corsi di laurea ci sono per ogni dipartimento
+
+```sql
+SELECT `departments`.`name`, COUNT(*) AS "degrees_for_department"
+FROM `departments`
+INNER JOIN `degrees`
+ON `departments`.`id` = `degrees`.`department_id`
+GROUP BY `departments`.`id`;
+```
