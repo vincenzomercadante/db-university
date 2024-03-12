@@ -13,3 +13,13 @@ SELECT DISTINCT YEAR(`enrolment_date`), COUNT(*) as "total_students"
 FROM `students`
 GROUP BY YEAR(`enrolment_date`);
 ```
+
+### QUERY 2
+
+- Contare gli insegnanti che hanno l'ufficio nello stesso edificio
+
+```sql
+SELECT DISTINCT `office_address`, COUNT(*) as "number_of_teachers"
+FROM `teachers`
+GROUP BY `office_address`;
+```
