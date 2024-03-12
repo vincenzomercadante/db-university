@@ -9,7 +9,7 @@ Dopo aver creato un nuovo database nel vostro phpMyAdmin e aver importato lo sch
 - Contare quanti iscritti ci sono stati ogni anno
 
 ```sql
-SELECT DISTINCT YEAR(`enrolment_date`), COUNT(*) as "total_students"
+SELECT DISTINCT YEAR(`enrolment_date`), COUNT(*) AS "total_students"
 FROM `students`
 GROUP BY YEAR(`enrolment_date`);
 ```
@@ -19,7 +19,17 @@ GROUP BY YEAR(`enrolment_date`);
 - Contare gli insegnanti che hanno l'ufficio nello stesso edificio
 
 ```sql
-SELECT DISTINCT `office_address`, COUNT(*) as "number_of_teachers"
+SELECT DISTINCT `office_address`, COUNT(*) AS "number_of_teachers"
 FROM `teachers`
 GROUP BY `office_address`;
+```
+
+### QUERY 3
+
+- Contare gli insegnanti che hanno l'ufficio nello stesso edificio
+
+```sql
+SELECT `exam_id`, CEIL(AVG(`vote`)) AS "avg_vote"
+FROM `exam_student`
+GROUP BY `exam_id`;
 ```
