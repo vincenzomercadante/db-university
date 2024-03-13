@@ -26,7 +26,7 @@ SELECT `degrees`.*
 FROM `degrees`
 INNER JOIN `departments`
 ON `departments`.`id` =`degrees`.`department_id`
-WHERE `departments`.`name` = "Dipartimento di Neuroscienze";
+WHERE `departments`.`name` = "Dipartimento di Neuroscienze" AND `degrees`.`level` = "magistrale";
 ```
 
 ### QUERY 3
