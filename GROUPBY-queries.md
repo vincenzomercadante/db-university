@@ -26,7 +26,7 @@ GROUP BY `office_address`;
 
 ### QUERY 3
 
-- Contare gli insegnanti che hanno l'ufficio nello stesso edificio
+- Calcolare la media dei voti di ogni appello d'esame
 
 ```sql
 SELECT `exam_id`, CEIL(AVG(`vote`)) AS "avg_vote"
@@ -41,7 +41,5 @@ GROUP BY `exam_id`;
 ```sql
 SELECT `departments`.`name`, COUNT(*) AS "degrees_for_department"
 FROM `departments`
-INNER JOIN `degrees`
-ON `departments`.`id` = `degrees`.`department_id`
 GROUP BY `departments`.`id`;
 ```
